@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "a1b90abf-f471-4d84-bcc7-8cda187de88e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11896355",
+		"_collection_link": "https://dark-eclipse-541607.postman.co/workspace/TESTT~9e587be8-7167-499f-8ee3-710700fb2aac/collection/11896355-a1b90abf-f471-4d84-bcc7-8cda187de88e?action=share&source=collection_link&creator=11896355"
+	},
+	"item": [
+		{
+			"name": "Generate token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/exchange"
+			},
+			"response": []
+		},
+		{
+			"name": "Exchange Rate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJhZG1pbiJdLCJ1c2VybmFtZSI6InJjYXN0aWxsbyIsInN1YiI6InJjYXN0aWxsbyIsImlhdCI6MTcxNjQyNTA2MCwiZXhwIjoxNzE2NDI3ODYwfQ.p392RWziquR1vReEGTpXZOMVwSMQJt7I8FVTUEQ13MPXbmGP3lJmM6XQdEFuTc8zTd62Kks7aTYmhW1Nb15hbw"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monto\": 50.0,\r\n    \"monedaOrigen\": \"es\",\r\n    \"monedaDestino\": \"PEN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/exchange"
+			},
+			"response": []
+		},
+		{
+			"name": "OpenerApi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://open.er-api.com/v6/latest/PEN"
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Exchanges",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJhZG1pbiJdLCJ1c2VybmFtZSI6InJjYXN0aWxsbyIsInN1YiI6InJjYXN0aWxsbyIsImlhdCI6MTcxNjQyNTA2MCwiZXhwIjoxNzE2NDI3ODYwfQ.p392RWziquR1vReEGTpXZOMVwSMQJt7I8FVTUEQ13MPXbmGP3lJmM6XQdEFuTc8zTd62Kks7aTYmhW1Nb15hbw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/exchange/my-exchanges"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Exchanges",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6WyJhZG1pbiJdLCJ1c2VybmFtZSI6InJjYXN0aWxsbyIsInN1YiI6InJjYXN0aWxsbyIsImlhdCI6MTcxNjQyNTA2MCwiZXhwIjoxNzE2NDI3ODYwfQ.p392RWziquR1vReEGTpXZOMVwSMQJt7I8FVTUEQ13MPXbmGP3lJmM6XQdEFuTc8zTd62Kks7aTYmhW1Nb15hbw"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/exchange"
+			},
+			"response": []
+		}
+	]
+}
